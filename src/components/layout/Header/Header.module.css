@@ -1,0 +1,52 @@
+p {
+    margin:0;
+}
+
+.headerSection {
+    font-family: "Roboto", sans-serif;
+    min-height: 109px;
+    background: linear-gradient(90deg, #343333 16.73%, #484848 58.63%, #282828 98.63%);
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.modsenSvg {
+    width: 288px;
+    margin-top: 19px;
+    margin-left: 145px;
+}
+
+li {
+    list-style: none;
+}
+.navBar {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    margin-right: 141px;
+    color: #ffffff;
+    gap:31px;
+}
+
+.navLink {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.nav-link.active {
+    text-decoration: none;
+    color: #e0a449;
+}
+
+.navBar-item {
+    display: flex;
+    gap: 10px;
+}

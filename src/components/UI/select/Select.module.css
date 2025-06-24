@@ -1,0 +1,90 @@
+/* sort-sec */
+.sort-container {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: var(--second-family);
+      justify-content: right;
+      margin-top:25px;
+      margin-bottom: 26px;
+    }
+
+.sort-label {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 150%;
+      letter-spacing: 0.1px;
+      color: #393939;
+}
+
+.sort-dropdown {
+      position: relative;
+}
+
+.sort-button {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 20px; 
+      padding: 8px 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      transition: all 0.3s;
+      color: #c4c4c4;
+
+      border: 1px solid #c4c4c4;
+    border-radius: 16px;
+    padding: 16px;
+    width: 146px;
+    height: 41px;
+}
+
+.sort-button:hover {
+      border-color: #999;
+}
+
+.sort-button:after {
+      content: url(/images/icons/galka.svg);
+      font-size: 10px;
+      margin-left: 8px;
+}
+
+.sort-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Скруглённые углы для выпадающего списка */
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 10;
+}
+
+.sort-options.show {
+    display: block;
+}
+
+.sort-option {
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sort-option:hover {
+    background: #f5f5f5;
+}
+
+.sort-option:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sort-option:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

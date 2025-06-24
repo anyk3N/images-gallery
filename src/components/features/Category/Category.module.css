@@ -1,0 +1,14 @@
+.themeSection {
+    width: 909px; 
+    height: 1053px; 
+    margin: 0 auto; 
+    padding: 40px 0;
+}
+
+.themeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 285px); 
+  row-gap: 26px;
+  column-gap: 26px;
+}
+

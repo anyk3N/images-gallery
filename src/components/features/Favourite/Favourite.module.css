@@ -1,0 +1,27 @@
+.favouriteSection {
+    width: 909px; 
+    margin: 0 auto; 
+}
+
+.favouriteTitle {
+    margin: 42px auto;
+    line-height: 44px;    
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: #393939;
+    font-weight: 400;
+}
+
+.favouriteTitleText {
+    font-size: 32px;
+    font-weight: 400;
+    color: #e0a449;
+}
+
+.favouriteTitleH2 {
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 40px;
+    font-weight: 400;
+    color: #393939;
+}
