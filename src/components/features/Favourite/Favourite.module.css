@@ -1,6 +1,9 @@
 .favouriteSection {
-    width: 909px; 
     margin: 0 auto; 
+}
+
+.countainer {
+    text-align: center;
 }
 
 .favouriteTitle {
@@ -19,9 +22,24 @@
 }
 
 .favouriteTitleH2 {
-    margin: 0;
-    padding-bottom: 5px;
-    font-size: 40px;
-    font-weight: 400;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    text-transform: capitalize;
+    text-align: center;
     color: #393939;
+}
+
+.favouriteTitleSpan {
+    color: #e0a449;
+}
+
+.themeGrid {
+    margin: 0 auto;
+    max-width: 909px;
+    display: grid;
+    grid-template-columns: repeat(3, 285px); 
+    gap: 26px; 
+    row-gap: 21px;
+    column-gap: 26px;
 }

@@ -1,11 +1,5 @@
+import type { PaginationProps } from "../../../types/types";
 import styles from "./Pagination.module.css";
-
-interface PaginationProps {
-  page: number;
-  total: number;
-  perPage?: number;
-  onChange: (page: number) => void;
-}
 
 const Pagination = ({ page, total, perPage = 12, onChange }: PaginationProps) => {
   const totalPages = Math.ceil(total / perPage);

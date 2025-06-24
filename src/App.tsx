@@ -6,15 +6,15 @@ import FavouritesPage from "./pages/FavouritesPage/FavouritesPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<CategoryPage/>}/>
-        <Route path="/images" element={<ImagesPage/>}/>
-        <Route path="/images/:category" element={<ImagesPage/>} />
-        <Route path="/favourites" element={<FavouritesPage/>} />
-        <Route path="*" element={<NotFoundPage/>}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<CategoryPage/>}/>
+          <Route path="/images" element={<ImagesPage/>}/>
+          <Route path="/images/:category" element={<ImagesPage/>} />
+          <Route path="/favourites" element={<FavouritesPage/>} />
+          <Route path="*" element={<NotFoundPage/>}/>
+        </Routes>
+      </BrowserRouter>
     );
 }
  

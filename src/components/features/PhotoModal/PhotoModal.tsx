@@ -6,6 +6,20 @@ import rightArrow from "../../../assets/icons/right arrow.svg";
 import fav from "../../../assets/icons/features or.svg"
 import favActive from "../../../assets/icons/features or full.svg"
 
+const FAV_KEY = "favouritePhotos";
+
+function getFavourites() {
+  try {
+    return JSON.parse(sessionStorage.getItem(FAV_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function saveFavourites(favs: any[]) {
+  sessionStorage.setItem(FAV_KEY, JSON.stringify(favs));
+}
+
 const PhotoModal: React.FC<PhotoModalProps> = ({
   photos,
   currentIndex,
@@ -14,6 +28,27 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
   onNext,
 }) => {
   const photo = photos[currentIndex];
+
+  const [isFav, setIsFav] = useState(false);
+
+  useEffect(() => {
+    const favs = getFavourites();
+    setIsFav(favs.some((p: any) => p.url === photo.url));
+  }, [photo.url]);
+
+  const handleFavClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const favs = getFavourites();
+    if (isFav) {
+      const updated = favs.filter((p: any) => p.url !== photo.url);
+      saveFavourites(updated);
+      setIsFav(false);
+    } else {
+      const updated = [...favs, { url: photo.url, title: photo.title }];
+      saveFavourites(updated);
+      setIsFav(true);
+    }
+  };
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -26,8 +61,6 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) onClose();
   };
-
-  const [isFav, setIsFav] = useState(false);
 
   return (
     <div className={styles.backdrop} onClick={handleBackdropClick}>
@@ -49,7 +82,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
               className={styles.favIcon} 
               src={isFav ? favActive : fav} 
               alt="Favourite"
-              onClick={() => setIsFav((prev) => !prev)}
+              onClick={handleFavClick}
             />
           </div>}
       </div>

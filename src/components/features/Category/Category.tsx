@@ -1,9 +1,8 @@
-import CategoryCard from "../../UI/CategoryCard/CategoryCard";
 import styles from "./Category.module.css";
 import { useEffect, useState } from "react";
 import type { UnsplashPhoto } from "../../../types/types";
 import { fetchCollections } from "../../../utils/fetcher";
-
+import CategoryCard from "../../UI/CategoryCard/CategoryCard";
 
 const Category = () => {
     const [photos, setPhotos] = useState<UnsplashPhoto[]>([]);

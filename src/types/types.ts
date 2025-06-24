@@ -50,3 +50,10 @@ export interface SelectorProps {
     defaultValue: string;
     onSortChange: (value: string) => void;
 }
+
+export interface PaginationProps {
+  page: number;
+  total: number;
+  perPage?: number;
+  onChange: (page: number) => void;
+}

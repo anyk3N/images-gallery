@@ -8,6 +8,7 @@ import PhotoModal from "../PhotoModal/PhotoModal";
 import { searchSortOptions, mainSortOptions } from "../../../constants/sortOptions";
 import Selector from "../../UI/select/Selector";
 import Loader from "../../UI/Loader/Loader";
+import Pagination from "../Pagination/Pagination";
 
 const perPage = 12;
 
@@ -15,7 +16,8 @@ const Photos = () => {
   
   const { category } = useParams<{ category: string }>();
   const [photos, setPhotos] = useState<UnsplashPhoto[]>([]);
-  const [page] = useState(1);   
+  const [total, setTotal] = useState(0);
+  const [page, setPage] = useState(1);   
   const [modalIndex, setModalIndex] = useState<number | null>(null);
   const [sort, setSort] = useState<string>("sortOptions[0].value");
   const [loading, setLoading] = useState(false);
@@ -29,6 +31,7 @@ const Photos = () => {
       fetchPhotosByCategory(category, page, perPage, sort.toLowerCase())
         .then(data => {
           setPhotos(data);
+          setTotal(data.length < perPage && page === 1 ? data.length : 1000); 
         })
         .catch(console.error)
         .finally(() => setLoading(false));
@@ -38,6 +41,7 @@ const Photos = () => {
       fetchPhotos(page, perPage, sortValue)
         .then(data => {
           setPhotos(data);
+          setTotal(1000)
         })
         .catch(console.error)
         .finally(() => setLoading(false));
@@ -75,6 +79,14 @@ const Photos = () => {
               />
             ))}
           </div>
+           {total > perPage && (
+            <Pagination
+              page={page}
+              total={total}
+              perPage={perPage}
+              onChange={setPage}
+            />
+          )}
         </>
       ) : (
         <>
