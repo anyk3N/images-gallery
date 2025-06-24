@@ -5,8 +5,6 @@ import { apiKey } from "../constants/api";
 export async function fetchCollections(): Promise<UnsplashPhoto[]> {
   const response = await fetch(`${apiUrl}/collections?per_page=12&client_id=${apiKey}`);
   if (!response.ok) throw new Error("Ошибка загрузки коллекций");
-  console.log('API KEY:', import.meta.env.VITE_ACCESS_KEY);
-
   return response.json();
 }
 
