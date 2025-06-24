@@ -57,3 +57,4 @@ export default tseslint.config({
 })
 ```
 >>>>>>> d38edd4 (1 commit)
+# Photo-gallery
