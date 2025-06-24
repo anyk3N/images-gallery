@@ -1,10 +1,8 @@
 export interface UnsplashPhoto {
   id: string;
-  
   urls: {
         small: string;
   };
-
   cover_photo: {
     urls: {
         small: string;
@@ -15,6 +13,11 @@ export interface UnsplashPhoto {
   links: {
     html: string;
   };
+}
+
+export interface UnsplashSearchResponse {
+  total: number;
+  results: UnsplashPhoto[];
 }
 
 export interface CardProps {
@@ -31,3 +34,19 @@ export interface NavButtonProps {
     isActive: boolean;
 }
 
+export interface PhotoModalProps {
+  photos: { url: string; title?: string }[];
+  currentIndex: number;
+  onClose: () => void;
+  onPrev: () => void;
+  onNext: () => void;
+}
+
+export interface SelectorProps {
+    options: {
+        value: string,
+        name: string,
+    }[];
+    defaultValue: string;
+    onSortChange: (value: string) => void;
+}

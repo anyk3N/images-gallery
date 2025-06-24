@@ -4,7 +4,6 @@ import loupe from "../../assets/icons/lypa.svg"
 
 const SearchBar = () => {
     return (
-        // <Search/>
         <section className={styles.titleSec}>
             <div className="container">
                 <h2 className={styles.titleText2}>
@@ -14,8 +13,8 @@ const SearchBar = () => {
                 </h2>
             </div>
             <form className={styles.searchBar}>
-                <button className={styles.searchBtn} type="submit">
-                    <img src={loupe} alt="search" />
+                <button className={styles.searchBtn} onClick={(e) => e.preventDefault()} type="submit">
+                    <img src={loupe} alt="search"/>
                 </button>
                 <input className={styles.searchInput} type="text" placeholder="Search..." />
             </form>

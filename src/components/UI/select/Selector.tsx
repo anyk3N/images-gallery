@@ -1,57 +1,43 @@
-interface SelectorProps {
-    options: {
-        value: string,
-        name: string,
-    }[];
-    defaultValue: string;
-    onSortChange: (value: string) => void;
-
-}
+import { useState } from "react";
+import type { SelectorProps } from "../../../types/types";
+import styles from "./Select.module.css"
 
 const Selector = ({options, defaultValue, onSortChange}: SelectorProps) => {
+    const [open, setOpen] = useState(false);
+    const [selected, setSelected] = useState<string>("");
+    const handleSelect = (value: string) => {
+        setSelected(value);
+        onSortChange(value);
+        setOpen(false);
+    };
+    const selectedLabel = options.find(opt => opt.value === selected)?.name || defaultValue;
+
     return (
-
-        
-        // <div className="sort-container">
-        //     <span className="sort-label">Sort by</span>
-        //     <div className="sort-dropdown">
-        //         <button className="sort-button">Relevant</button>
-        //         <div className="sort-options">
-        //             <div className="sort-option" data-value="relevant">Relevant</div>
-        //             <div className="sort-option" data-value="latest">Latest</div>
-        //         </div>
-        //     </div>
-        // </div>
-
-        <div className="sort-container">
-            <span className="sort-label">Sort by</span>
-            <div className="sort-dropdown">
-            <select
-                className="sort-select"
-                defaultValue=""
-                onChange={(e) => {
-                    onSortChange(e.target.value)
-                }}
-            >
-                <option disabled value="">{defaultValue}</option>
-                {options.map(option =>
-                <option key={option.value} value={option.value}>
-                    {option.name}
-                </option>
-                )}
-            </select>
+        <div className={styles.sortContainer}>
+            <span className={styles.sortLabel}>Sort by</span>
+            <div className={styles.sortDropdown}>
+                <button
+                    type="button"
+                    className={styles.sortButton}
+                    onClick={() => setOpen((prev: any) => !prev)}
+                >
+                    {selectedLabel}
+                </button>
+                <div className={`${styles.sortOptions} ${open ? styles.sortOptionsShow : ""}`}>
+                    {options.map(option => (
+                    <div
+                        key={option.value}
+                        className={styles.sortOption}
+                        onClick={() => handleSelect(option.value)}
+                        data-value={option.value}
+                    >
+                        {option.name}
+                    </div>
+                ))}
+                </div>
             </div>
         </div>
 
-
-        // <select>
-        //     <option disabled value="">{defaultValue}</option>
-        //     {options.map(option => 
-        //         <option value ={option.value}>
-        //             {option.name}
-        //         </option>
-        //     )}
-        // </select>
       );
 }
  

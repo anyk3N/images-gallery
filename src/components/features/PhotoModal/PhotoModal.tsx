@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./PhotoModal.module.css";
-
-interface PhotoModalProps {
-  photos: { url: string; title?: string }[];
-  currentIndex: number;
-  onClose: () => void;
-  onPrev: () => void;
-  onNext: () => void;
-}
+import type { PhotoModalProps } from "../../../types/types";
+import leftArrow from "../../../assets/icons/left arrow.svg"; 
+import rightArrow from "../../../assets/icons/right arrow.svg";
+import fav from "../../../assets/icons/features or.svg"
+import favActive from "../../../assets/icons/features or full.svg"
 
 const PhotoModal: React.FC<PhotoModalProps> = ({
   photos,
@@ -16,6 +13,8 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
   onPrev,
   onNext,
 }) => {
+  const photo = photos[currentIndex];
+
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -28,7 +27,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
     if (e.target === e.currentTarget) onClose();
   };
 
-  const photo = photos[currentIndex];
+  const [isFav, setIsFav] = useState(false);
 
   return (
     <div className={styles.backdrop} onClick={handleBackdropClick}>
@@ -36,10 +35,23 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
         <button className={styles.close} onClick={onClose}>
           &times;
         </button>
-        <button className={styles.arrowLeft} onClick={onPrev}>&#8592;</button>
+        <button className={styles.arrowLeft} onClick={onPrev}>
+          <img src={leftArrow} alt="prev"></img>
+        </button>
         <img className={styles.image} src={photo.url} alt={photo.title} />
-        <button className={styles.arrowRight} onClick={onNext}>&#8594;</button>
-        {photo.title && <div className={styles.title}>{photo.title}</div>}
+        <button className={styles.arrowRight} onClick={onNext}>
+          <img src={rightArrow} alt="Next" />
+        </button>
+        {photo.title && 
+          <div className={styles.title}>
+            {photo.title}
+            <img 
+              className={styles.favIcon} 
+              src={isFav ? favActive : fav} 
+              alt="Favourite"
+              onClick={() => setIsFav((prev) => !prev)}
+            />
+          </div>}
       </div>
     </div>
   );
