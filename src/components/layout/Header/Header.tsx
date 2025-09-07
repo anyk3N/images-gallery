@@ -1,12 +1,12 @@
 import styles from "./Header.module.css";
-import modsen from "../../../assets/icons/modsen.svg"
+import PhotoGalleryLogo from "assets/icons/PhotoGalleryLogo.svg"
 import images from "../../../assets/icons/images wh.svg";
 import imagesActive from "../../../assets/icons/images or.svg"
 import category from "../../../assets/icons/category wh.svg";
 import categoryActive from "../../../assets/icons/category ora.svg";
 import favourites from "../../../assets/icons/features wh.svg";
 import favouritesActive from "../../../assets/icons/features or.svg";
-import NavButton from "../../UI/button/NavButton";
+import NavButton from "components/UI/navButton/NavButton";
 import { NavLink } from "react-router-dom";
 
 const navLinks = [
@@ -19,9 +19,9 @@ const Header = () => (
   <header className={styles.headerSection}>
     <a href="/">
       <img 
-        className={styles.modsenSvg} 
-        src={modsen} 
-        alt="Modsen logo" 
+        className={styles.PhotoGalleryLogo}
+        src={PhotoGalleryLogo}
+        alt="Photo Gallery"
       />
     </a>
     <nav className={styles.navBar}>

@@ -1,4 +1,4 @@
-import type { NavButtonProps } from "../../../types/types";
+import type { NavButtonProps } from "types/types";
 import styles from "./navBtn.module.css"
 
 const NavButton = ({navUrl, title, isActive} : NavButtonProps) => {

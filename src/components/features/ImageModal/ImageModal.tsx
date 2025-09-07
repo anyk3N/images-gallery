@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import styles from "./PhotoModal.module.css";
-import type { PhotoModalProps } from "../../../types/types";
-import leftArrow from "../../../assets/icons/left arrow.svg"; 
-import rightArrow from "../../../assets/icons/right arrow.svg";
-import fav from "../../../assets/icons/features or.svg"
-import favActive from "../../../assets/icons/features or full.svg"
+import styles from "./ImageModal.module.css";
+import type { PhotoModalProps } from "types/types.ts";
+import leftArrow from "assets/icons/left arrow.svg";
+import rightArrow from "assets/icons/right arrow.svg";
+import fav from "assets/icons/features or.svg"
+import favActive from "assets/icons/features or full.svg"
 
 const FAV_KEY = "favouritePhotos";
 
@@ -20,13 +20,14 @@ function saveFavourites(favs: any[]) {
   sessionStorage.setItem(FAV_KEY, JSON.stringify(favs));
 }
 
-const PhotoModal: React.FC<PhotoModalProps> = ({
+const ImageModal: React.FC<PhotoModalProps> = ({
   photos,
   currentIndex,
   onClose,
   onPrev,
   onNext,
 }) => {
+
   const photo = photos[currentIndex];
 
   const [isFav, setIsFav] = useState(false);
@@ -49,14 +50,6 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
       setIsFav(true);
     }
   };
-
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", handleEsc);
-    return () => document.removeEventListener("keydown", handleEsc);
-  }, [onClose]);
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) onClose();
@@ -81,7 +74,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
             <img 
               className={styles.favIcon} 
               src={isFav ? favActive : fav} 
-              alt="Favourite"
+              alt="FavouriteList"
               onClick={handleFavClick}
             />
           </div>}
@@ -90,4 +83,4 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
   );
 };
 
-export default PhotoModal;
+export default ImageModal;

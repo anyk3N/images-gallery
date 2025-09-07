@@ -1,13 +1,12 @@
 import { useState } from "react";
-import type { SelectorProps } from "../../../types/types";
+import type { SelectorProps } from "types/types";
 import styles from "./Select.module.css"
 
-const Selector = ({options, defaultValue, onSortChange}: SelectorProps) => {
+const Selector = ({options, defaultValue}: SelectorProps) => {
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState<string>("");
     const handleSelect = (value: string) => {
         setSelected(value);
-        onSortChange(value);
         setOpen(false);
     };
     const selectedLabel = options.find(opt => opt.value === selected)?.name || defaultValue;

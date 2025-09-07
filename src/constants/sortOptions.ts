@@ -5,5 +5,5 @@ export const searchSortOptions = [
 
 export const mainSortOptions = [
   { value: "latest", name: "Latest" },
-  { value: "popular", name: "Popular" },
+  { value: "relevant", name: "Relevant" },
 ];

@@ -1,11 +1,11 @@
 export interface UnsplashPhoto {
   id: string;
   urls: {
-        small: string;
+      regular: string;
   };
   cover_photo: {
     urls: {
-        small: string;
+        regular: string;
   };
   }
   alt_description?: string;
@@ -24,7 +24,6 @@ export interface CardProps {
     url: string,
     category?: string;
     title?: string;
-    body?: string;
     onClick?: () => void
 }
 
@@ -48,12 +47,11 @@ export interface SelectorProps {
         name: string,
     }[];
     defaultValue: string;
-    onSortChange: (value: string) => void;
+    // onSortChange: (value: string) => void;
 }
 
 export interface PaginationProps {
-  page: number;
-  total: number;
+  totalPages: number;
   perPage?: number;
   onChange: (page: number) => void;
 }

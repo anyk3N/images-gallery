@@ -1,14 +1,18 @@
 import Footer from "../../components/layout/Footer/Footer";
 import Header from "../../components/layout/Header/Header";
-import Photos from "../../components/features/Photos/Photos";
+import ImagesList from "components/features/ImagesList/ImagesList.tsx";
 import SearchBar from "../../components/features/Search/SearchBar";
+import {useState} from "react";
 
-const ImagesPage: React.FC = () => {
+const ImagesPage= () => {
+    const [searchQuery, setSearchQuery] = useState("");
+
+
     return (
         <>
             <Header/>
-            <SearchBar/>
-            <Photos/>
+            <SearchBar onSearch={setSearchQuery} />
+            <ImagesList searchQuery={searchQuery} />
             <Footer/>
         </>
       );

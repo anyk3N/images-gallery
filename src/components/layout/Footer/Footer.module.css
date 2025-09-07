@@ -1,7 +1,7 @@
 .footer {
     background: linear-gradient(90deg, #343333 44.73%, #484848 65.63%, #282828 98.63%);
     color: #ecf0f1;
-    padding: 3rem 0;
+    padding: 48px 0;
     margin-top: 55px;
 }
 
@@ -17,17 +17,18 @@
 }
 
 .footerLogo {
+    width: 200px;
     margin-top:32px ;
-  margin-bottom: 14px
+    margin-bottom: 14px
 }
 
 .footerText {
     font-size:14px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     line-height: 157%;
-    color: rgba(255, 255, 255, 0.6);
+    color: #FFFFFF99;
     opacity: 0.8;
 }
 
@@ -37,12 +38,20 @@
     margin-bottom: 21px;
 }
 
+.socialIcon svg:hover  {
+    fill: #e0a449;
+    transition: transform 0.4s ease;
+    transform: scale(1.1);
+    color:white;
+
+}
+
 .copyright {
     opacity: 0.8;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #FFFFFF99;
     margin-left: 86px;
 }
 
@@ -66,7 +75,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 90%;
-  letter-spacing: 0.15em;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #e0a449;
 }
@@ -79,17 +88,16 @@
   color: #ffffff96;
 }
 .linkItem {
-  margin-bottom: 0.8rem;
+  margin-bottom: 13px;
 }
 .link {
-  color: #bdc3c7;
   text-decoration: none;
   transition: color 0.3s;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 102%;
-  color: rgba(255, 255, 255, 0.6);
+  color: #FFFFFF99;
 }
 .link:hover {
   color: #3498db;

@@ -1,15 +1,16 @@
 import styles from "../Footer/Footer.module.css";
-import twitter from "../../../assets/icons/1.svg"
-import facebook from "../../../assets/icons/2.svg";
-import instagram from "../../../assets/icons/3.svg";
-import git from "../../../assets/icons/4.svg";
-import modsen from "../../../assets/icons/modsen.svg";
+import twitter from "assets/icons/1.svg"
+import facebook from "assets/icons/2.svg";
+import instagram from "assets/icons/3.svg";
+import git from "assets/icons/4.svg";
+import PhotoGalleryLogo from "assets/icons/PhotoGalleryLogo.svg"
+import {FooterSVGSelector} from "components/layout/Footer/FooterSVGSelector.tsx";
 
 const socialLinks = [
-  { href: "#", icon: twitter, alt: "Twitter" },
-  { href: "#", icon: facebook, alt: "Facebook" },
-  { href: "#", icon: instagram, alt: "Instagram" },
-  { href: "#", icon: git, alt: "GitHub" },
+  { href: "/", icon: twitter, alt: "twitter" },
+  { href: "/", icon: facebook, alt: "facebook" },
+  { href: "/", icon: instagram, alt: "instagram" },
+  { href: "/", icon: git, alt: "gitHub" },
 ];
 
 const footerLinks = [
@@ -56,15 +57,15 @@ const Footer = () => (
     <div className={styles.footerContainer}>
       <div className={styles.footerBrand}>
         <a href="/">
-          <img src={modsen} alt="Логотип" className={styles.footerLogo} />
+          <img src={PhotoGalleryLogo} alt="Photo Gallery" className={styles.footerLogo} />
         </a>
         <p className={styles.footerText}>
-          We have images that capture every<br /> mood and inspire every vision. From breathtaking landscapes to vibrant portraits.
+          We have images that capture every mood and inspire every vision. From breathtaking landscapes to vibrant portraits.
         </p>
         <div className={styles.socialIcons}>
           {socialLinks.map((item) => (
-            <a key={item.alt} href={item.href} target="_blank" rel="noopener noreferrer">
-              <img src={item.icon} alt={item.alt} />
+            <a className={styles.socialIcon} key={item.alt} href={item.href}>
+              <FooterSVGSelector id={item.alt}/>
             </a>
           ))}
         </div>
@@ -85,7 +86,7 @@ const Footer = () => (
       </div>
     </div>
     <p className={styles.copyright}>
-      Modsen.gallery © 2000-2025, All Rights Reserved
+      Photo.gallery © 2000-2025, All Rights Reserved
     </p>
   </footer>
 );

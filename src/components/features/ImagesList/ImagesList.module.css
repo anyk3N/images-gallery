@@ -1,6 +1,7 @@
 .photosSection {
     width: 909px; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    min-height: 1200px;
 }
 
 .themeGrid {
@@ -9,6 +10,7 @@
   gap: 26px; 
   row-gap: 21px;
   column-gap: 26px;
+    min-height: 909px;
 }
 
 .photos-grid {

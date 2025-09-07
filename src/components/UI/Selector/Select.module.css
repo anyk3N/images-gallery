@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  font-family: var(--second-family);
+  font-family: "Lexend Deca", sans-serif;
   justify-content: right;
   margin-top: 25px;
   margin-bottom: 26px;
@@ -12,7 +12,6 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 150%;
-  letter-spacing: 0.1px;
   color: #393939;
 }
 
@@ -22,9 +21,6 @@
 
 .sortButton {
   background: white;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  padding: 8px 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -44,7 +40,7 @@
 }
 
 .sortButton:after {
-  content: url("../../../assets/icons/galka.svg");
+  content: url("assets/icons/galka.svg");
   font-size: 10px;
   margin-left: 8px;
 }

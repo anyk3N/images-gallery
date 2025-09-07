@@ -1,10 +1,10 @@
-import styles from "./Favourite.module.css";
+import styles from "./FavouriteList.module.css";
 import { useEffect, useState } from "react";
-import PhotoCard from "../../UI/PhotoCard/PhotoCard";
+import ImageCard from "components/UI/ImageCard/ImageCard.tsx";
 
 const FAV_KEY = "favouritePhotos";
 
-const Favourite = () => {
+const FavouriteList = () => {
     const [favs, setFavs] = useState<{ url: string; title?: string }[]>([]);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const Favourite = () => {
                         </div>
                         <div className={styles.themeGrid}>
                             {favs.map((photo, idx) => (
-                                <PhotoCard
+                                <ImageCard
                                     key={photo.url + idx}
                                     url={photo.url}
                                     title={photo.title}
@@ -46,4 +46,4 @@ const Favourite = () => {
       );
 }
  
-export default Favourite;
+export default FavouriteList;

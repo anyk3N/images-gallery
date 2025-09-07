@@ -26,3 +26,105 @@
   padding: 6px 14px;
   font-size: 16px;
 }
+
+
+/* components/features/Pagination/Pagination.module.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 2rem 0;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.pageButton {
+  padding: 8px 12px;
+  border: 1px solid #e1e1e1;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pageButton:hover:not(:disabled):not(.ellipsis) {
+  background: #f0f0f0;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.pageButton.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pageButton:disabled:not(.ellipsis) {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ellipsis {
+  cursor: default;
+  border: none;
+  background: transparent;
+  min-width: 30px;
+}
+
+.ellipsis:hover {
+  background: transparent;
+}
+
+.arrowButton {
+  padding: 8px 12px;
+  border: 1px solid #e1e1e1;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowButton:hover:not(:disabled) {
+  background: #f0f0f0;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.arrowButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 4px;
+    padding: 0.5rem;
+  }
+
+  .pageButton {
+    min-width: 35px;
+    height: 35px;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .arrowButton {
+    min-width: 35px;
+    height: 35px;
+    padding: 6px 8px;
+  }
+}
