@@ -1,7 +1,7 @@
 .card {
   width: 285px;
   height: 233px;
-  border: 1px solid #F0F1F1;
+  border: 1px solid #f0f1f1;
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease;
@@ -62,7 +62,7 @@
 /* Анимация при нажатии */
 .cardIcon:active {
   transform: scale(1.5) rotate(15deg);
-  color: #FF8C00;
+  color: #ff8c00;
   text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
 }
 

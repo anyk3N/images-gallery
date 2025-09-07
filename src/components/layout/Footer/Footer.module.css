@@ -1,8 +1,13 @@
 .footer {
-    background: linear-gradient(90deg, #343333 44.73%, #484848 65.63%, #282828 98.63%);
-    color: #ecf0f1;
-    padding: 48px 0;
-    margin-top: 55px;
+  background: linear-gradient(
+    90deg,
+    #343333 44.73%,
+    #484848 65.63%,
+    #282828 98.63%
+  );
+  color: #ecf0f1;
+  padding: 48px 0;
+  margin-top: 55px;
 }
 
 .footerContainer {
@@ -17,57 +22,55 @@
 }
 
 .footerLogo {
-    width: 200px;
-    margin-top:32px ;
-    margin-bottom: 14px
+  width: 200px;
+  margin-top: 32px;
+  margin-bottom: 14px;
 }
 
 .footerText {
-    font-size:14px;
-    margin-bottom: 24px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    line-height: 157%;
-    color: #FFFFFF99;
-    opacity: 0.8;
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 157%;
+  color: #ffffff99;
+  opacity: 0.8;
 }
 
 .socialIcons {
-    display: flex;
-    gap: 11px;
-    margin-bottom: 21px;
+  display: flex;
+  gap: 11px;
+  margin-bottom: 21px;
 }
 
-.socialIcon svg:hover  {
-    fill: #e0a449;
-    transition: transform 0.4s ease;
-    transform: scale(1.1);
-    color:white;
-
+.socialIcon svg:hover {
+  fill: #e0a449;
+  transition: transform 0.4s ease;
+  transform: scale(1.1);
+  color: white;
 }
 
 .copyright {
-    opacity: 0.8;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #FFFFFF99;
-    margin-left: 86px;
+  opacity: 0.8;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff99;
+  margin-left: 86px;
 }
 
 .footerLinks {
-    margin-left: 55px;
-    margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap:85px;
+  margin-left: 55px;
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 85px;
 }
 
 .linkColumn {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .linkTitle {
@@ -97,7 +100,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 102%;
-  color: #FFFFFF99;
+  color: #ffffff99;
 }
 .link:hover {
   color: #3498db;

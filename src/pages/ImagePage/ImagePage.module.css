@@ -1,16 +1,15 @@
 .no-photo-title {
-    max-width: 684px;
-    margin: 122px auto 826px;
-    line-height: 80px;
-    font-family: "Lexend Deca", sans-serif;
-    font-weight: 700;
-    font-size: 64px;
-    text-transform: capitalize;
-    text-align: center;
-    color: #393939;
+  max-width: 684px;
+  margin: 122px auto 826px;
+  line-height: 80px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #393939;
 }
 
 .no-photo-title-span {
-    color: #f17900;
+  color: #f17900;
 }
-

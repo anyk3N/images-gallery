@@ -1,26 +1,25 @@
 .navBtn {
-    display: flex;
-    background: transparent;
-    outline: none;
-    border: none;
-    gap:7px;
-    cursor: pointer;
-    
+  display: flex;
+  background: transparent;
+  outline: none;
+  border: none;
+  gap: 7px;
+  cursor: pointer;
 }
 
 .navBtn:hover {
-    transition: color 0.3s ease;
-    transition: transform 0.4s ease; 
-    transform: scale(1.1);
+  transition: color 0.3s ease;
+  transition: transform 0.4s ease;
+  transform: scale(1.1);
 }
 
 .navLabel {
-    font-weight: 400;
-    font-size: 24px;
-    color: #ffffff;
-    transition: color 0.2s ease;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  transition: color 0.2s ease;
 }
 
 .active {
-    color: #e0a449;
+  color: #e0a449;
 }

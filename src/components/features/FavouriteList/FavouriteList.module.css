@@ -1,46 +1,46 @@
 .favouriteSection {
-    margin: 0 auto;
-    height: 1200px;
+  margin: 0 auto;
+  height: 1200px;
 }
 
 .countainer {
-    text-align: center;
+  text-align: center;
 }
 
 .favouriteTitle {
-    margin: 42px auto;
-    line-height: 44px;    
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    color: #393939;
-    font-weight: 400;
+  margin: 42px auto;
+  line-height: 44px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #393939;
+  font-weight: 400;
 }
 
 .favouriteTitleText {
-    font-size: 32px;
-    font-weight: 400;
-    color: #e0a449;
+  font-size: 32px;
+  font-weight: 400;
+  color: #e0a449;
 }
 
 .favouriteTitleH2 {
-    font-family: "Lexend Deca", sans-serif;
-    font-weight: 700;
-    font-size: 64px;
-    text-transform: capitalize;
-    text-align: center;
-    color: #393939;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #393939;
 }
 
 .favouriteTitleSpan {
-    color: #e0a449;
+  color: #e0a449;
 }
 
 .themeGrid {
-    margin: 0 auto;
-    max-width: 909px;
-    display: grid;
-    grid-template-columns: repeat(3, 285px); 
-    gap: 26px; 
-    row-gap: 21px;
-    column-gap: 26px;
+  margin: 0 auto;
+  max-width: 909px;
+  display: grid;
+  grid-template-columns: repeat(3, 285px);
+  gap: 26px;
+  row-gap: 21px;
+  column-gap: 26px;
 }

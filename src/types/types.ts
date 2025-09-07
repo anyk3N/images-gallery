@@ -1,57 +1,57 @@
 export interface UnsplashPhoto {
-  id: string;
+  id: string
   urls: {
-      regular: string;
-  };
+    regular: string
+  }
   cover_photo: {
     urls: {
-        regular: string;
-  };
+      regular: string
+    }
   }
-  alt_description?: string;
-  title: string;
+  alt_description?: string
+  title: string
   links: {
-    html: string;
-  };
+    html: string
+  }
 }
 
 export interface UnsplashSearchResponse {
-  total: number;
-  results: UnsplashPhoto[];
+  total: number
+  results: UnsplashPhoto[]
 }
 
 export interface CardProps {
-    url: string,
-    category?: string;
-    title?: string;
-    onClick?: () => void
+  url: string
+  category?: string
+  title?: string
+  onClick?: () => void
 }
 
 export interface NavButtonProps {
-    navUrl: string; 
-    title:  string;
-    isActive: boolean;
+  navUrl: string
+  title: string
+  isActive: boolean
 }
 
 export interface PhotoModalProps {
-  photos: { url: string; title?: string }[];
-  currentIndex: number;
-  onClose: () => void;
-  onPrev: () => void;
-  onNext: () => void;
+  photos: { url: string; title?: string }[]
+  currentIndex: number
+  onClose: () => void
+  onPrev: () => void
+  onNext: () => void
 }
 
 export interface SelectorProps {
-    options: {
-        value: string,
-        name: string,
-    }[];
-    defaultValue: string;
-    // onSortChange: (value: string) => void;
+  options: {
+    value: string
+    name: string
+  }[]
+  defaultValue: string
+  // onSortChange: (value: string) => void;
 }
 
 export interface PaginationProps {
-  totalPages: number;
-  perPage?: number;
-  onChange: (page: number) => void;
+  totalPages: number
+  perPage?: number
+  onChange: (page: number) => void
 }

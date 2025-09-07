@@ -1,35 +1,34 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
 .titleSec {
-    min-height: 421px;
-    background-image: url("assets/bg/background.svg");
-    background-size: cover;
-    background-position: center;
+  min-height: 421px;
+  background-image: url("assets/bg/background.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 .titleText2 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 64px;
-    text-transform: capitalize;
-    text-align: center;
-    color: #fffdfa;
-    margin-bottom: 85px;
-    padding-top: 63px;
-    line-height: 1.2;
-    text-shadow:
-            -1px 1px 2px #00000080,
-            1px 1px 2px #00000080,
-            1px -1px 0 #00000080,
-            -1px -1px 0 #00000080;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fffdfa;
+  margin-bottom: 85px;
+  padding-top: 63px;
+  line-height: 1.2;
+  text-shadow:
+    -1px 1px 2px #00000080,
+    1px 1px 2px #00000080,
+    1px -1px 0 #00000080,
+    -1px -1px 0 #00000080;
 }
 
 .spanText {
-    color: #f17900;
+  color: #f17900;
 }
-
 
 .searchBar {
   position: relative;

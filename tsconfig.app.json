@@ -32,7 +32,7 @@
       "types/*": ["types/*"],
       "constants/*": ["constants/*"],
       "hooks/*": ["hooks/*"],
-      "API/*": ["API/*"]
+      "api/*": ["api/*"]
     }
   },
   "include": ["src"]

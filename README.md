@@ -8,52 +8,26 @@ The project showcases clean architecture, hooks usage, API integration, and resp
 
 ## Features
 
-  * **Category filtering**
-  * **Search images by title** with debounce to reduce API load
-  * **Image modal** with previous/next navigation
-  * **Pagination**
+- **Category filtering**
+- **Search images by title** with debounce to reduce API load
+- **Image modal** with previous/next navigation
+- **Pagination**
 
+_Coming features_
 
-*Coming features*
-  * **Saving favorite images**
-  * **Adaptive layout**
+- **Saving favorite images**
+- **Adaptive layout**
 
 ---
 
 ## Tech Stack
 
-  * `React + TypeScript`
-  * `CSS Modules`
-  * `Vite`
-  * `Unsplash API`
-  * `Husky + Prettier (pre-commit hooks)`
+- `React + TypeScript`
+- `CSS Modules`
+- `Vite`
+- `Unsplash API`
+- `Husky + Prettier (pre-commit hooks)`
 
 ---
 
-
-
-
 ## Demo deploy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

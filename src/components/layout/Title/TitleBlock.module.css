@@ -1,26 +1,27 @@
 .titleSec {
-    min-height: 421px;
-    background-image: url("assets/bg/background.svg");
-    background-size: cover;
-    background-position: center;
+  min-height: 421px;
+  background-image: url("assets/bg/background.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 .titleText {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 96px;
-    text-transform: capitalize;
-    text-align: center;
-    color: #fffdfa;
-    margin: 0;
-    padding-top: 96px;
-    line-height: 1.2; 
-    text-shadow: -1px 1px 2px #00000080,
-                 1px 1px 2px #00000080,
-                 1px -1px 0 #00000080,
-                 -1px -1px 0 #00000080;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 96px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fffdfa;
+  margin: 0;
+  padding-top: 96px;
+  line-height: 1.2;
+  text-shadow:
+    -1px 1px 2px #00000080,
+    1px 1px 2px #00000080,
+    1px -1px 0 #00000080,
+    -1px -1px 0 #00000080;
 }
 
 .spanText {
-    color: #f17900;
+  color: #f17900;
 }

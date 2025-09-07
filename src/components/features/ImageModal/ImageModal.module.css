@@ -69,11 +69,12 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transition: all 0.3s ease;  
-  margin-right:60px;
+  transition: all 0.3s ease;
+  margin-right: 60px;
 }
 
-.arrowLeft, .arrowRight {
+.arrowLeft,
+.arrowRight {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -94,11 +95,11 @@
 }
 
 .arrowLeft {
-  left: -72px; 
+  left: -72px;
 }
 
 .arrowRight {
-  right: -72px; 
+  right: -72px;
 }
 
 .close {
@@ -118,4 +119,3 @@
   justify-content: center;
   transition: background 0.2s;
 }
-
