@@ -7,7 +7,7 @@ import Selector from "components/UI/Selector/Selector";
 import Loader from "components/UI/Loader/Loader";
 import Pagination from "components/features/Pagination/Pagination.tsx";
 
-import {fetchImages, fetchPhotosByCategory} from "API/ImageService"
+import {fetchImages, fetchPhotosByCategory} from "API/ImageService.ts";
 import {useFetching} from "hooks/useFetching";
 import {useModalGallery} from "hooks/useModalGallery";
 

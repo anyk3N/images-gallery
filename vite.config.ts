@@ -13,7 +13,7 @@ export default defineConfig({
       constants: '/src/constants',
       types: '/src/types',
       hooks: '/src/hooks',
-      api: '/src/api',
+      API: '/src/api',
     }
   }
 })

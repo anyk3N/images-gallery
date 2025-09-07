@@ -39,12 +39,10 @@ const Pagination: React.FC<PaginationProps> = ({
       pages.push(i);
     }
 
-    // Добавляем многоточие перед последней страницей если нужно
     if (endPage < totalPages - 1) {
       pages.push('...');
     }
 
-    // Всегда показываем последнюю страницу
     if (totalPages > 1) {
       pages.push(totalPages);
     }
@@ -55,12 +53,11 @@ const Pagination: React.FC<PaginationProps> = ({
   const visiblePages = getVisiblePages();
 
   if (totalPages <= 1) {
-    return null; // Не показываем пагинацию если всего 1 страница
+    return null;
   }
 
   return (
       <div className={styles.pagination}>
-        {/* Кнопка "Назад" */}
         <button
             className={styles.arrowButton}
             disabled={currentPage === 1}
@@ -70,7 +67,6 @@ const Pagination: React.FC<PaginationProps> = ({
           ←
         </button>
 
-        {/* Нумерация страниц */}
         {visiblePages.map((page, index) => (
             <button
                 key={index}
@@ -90,7 +86,6 @@ const Pagination: React.FC<PaginationProps> = ({
             </button>
         ))}
 
-        {/* Кнопка "Вперед" */}
         <button
             className={styles.arrowButton}
             disabled={currentPage === totalPages}
