@@ -2,7 +2,7 @@
 
 Gallery App is a modern web application built with React, TypeScript, and CSS Modules.
 Users can search for images, filter by categories, navigate with pagination, and view images in a modal.
-The project showcases clean architecture, hooks usage, API integration, and responsive layout — perfect for demonstrating practical frontend skills.
+The project showcases clean architecture, hooks usage, API integration, and responsive layout.
 
 ---
 
