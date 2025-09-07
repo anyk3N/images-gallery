@@ -14,7 +14,7 @@ The project showcases clean architecture, hooks usage, API integration, and resp
   * **Pagination**
 
 
-*Future features*
+*Coming features*
   * **Saving favorite images**
   * **Adaptive layout**
 
