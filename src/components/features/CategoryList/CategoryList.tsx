@@ -2,7 +2,7 @@ import styles from "./CategoryList.module.css"
 import { useEffect, useState } from "react"
 import CategoryCard from "components/UI/CategoryCard/CategoryCard"
 import type { UnsplashPhoto } from "types/types"
-import { fetchCollections } from "api/ImageService.ts"
+import { fetchCollections } from 'api/ImageService.ts'
 import Loader from "components/UI/Loader/Loader.tsx"
 import { useFetching } from "hooks/useFetching.ts"
 
