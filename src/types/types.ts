@@ -47,11 +47,15 @@ export interface SelectorProps {
     name: string
   }[]
   defaultValue: string
-  // onSortChange: (value: string) => void;
+  onSortChange: (value: string) => void;
 }
 
 export interface PaginationProps {
   totalPages: number
   perPage?: number
   onChange: (page: number) => void
+}
+
+export type ImagesListProps = {
+  searchQuery: string
 }

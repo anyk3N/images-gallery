@@ -10,7 +10,7 @@ export async function fetchCollections(): Promise<UnsplashPhoto[]> {
 }
 
 export async function fetchPhotosByCategory(
-  category: string,
+  category?: string,
   page = 1,
   perPage = 12,
   orderBy = "relevant",
@@ -22,13 +22,3 @@ export async function fetchPhotosByCategory(
   return data.results
 }
 
-export async function fetchImages(
-  page = 1,
-  per_page = 12,
-  orderBy = "relevant",
-): Promise<UnsplashPhoto[]> {
-  const response = await fetch(
-    `${apiUrl}/photos?page=${page}&per_page=${per_page}&order_by=${orderBy}&client_id=${apiKey}`,
-  )
-  return await response.json()
-}

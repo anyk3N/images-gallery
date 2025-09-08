@@ -7,50 +7,48 @@ import Selector from "components/UI/Selector/Selector"
 import Loader from "components/UI/Loader/Loader"
 import Pagination from "components/features/Pagination/Pagination.tsx"
 
-import { fetchImages, fetchPhotosByCategory } from "api/ImageService.ts"
+import { fetchPhotosByCategory } from "api/ImageService.ts"
 import { useFetching } from "hooks/useFetching"
 import { useModalGallery } from "hooks/useModalGallery"
 
-import { mainSortOptions, searchSortOptions } from "constants/sortOptions"
-import type { UnsplashPhoto } from "types/types"
+import { searchSortOptions } from "constants/sortOptions"
+import type {ImagesListProps, UnsplashPhoto} from "types/types"
 
 import styles from "components/features/ImagesList/ImagesList.module.css"
 
 const perPage = 12
-
-type ImagesListProps = {
-  searchQuery: string
-}
 
 const ImagesList = ({ searchQuery }: ImagesListProps) => {
   const { category } = useParams<{ category: string }>()
   const [photos, setPhotos] = useState<UnsplashPhoto[]>([])
   const [totalPages, setTotalPages] = useState<number>(100)
   const [currentPage, setCurrentPage] = useState(1)
-
-  const isSearch = Boolean(category)
-  const sortOptions = isSearch ? searchSortOptions : mainSortOptions
+  const [sort, setSort] = useState<string>("searchSortOptions[0].value")
 
   const { modalIndex, openModal, closeModal, handlePrev, handleNext } =
     useModalGallery(photos)
 
   const [fetchPhotos, isLoading, error] = useFetching(
-    async (query: string | undefined, page: number, perPage: number) => {
+    async (query: string | undefined, page: number, perPage: number, sort: string) => {
       const images = query
-        ? await fetchPhotosByCategory(query, page, perPage)
-        : await fetchImages(page, perPage)
+        ? await fetchPhotosByCategory(query, page, perPage,sort)
+        : await fetchPhotosByCategory(query, page, perPage,sort)
       setPhotos(images)
       setTotalPages(totalPages)
     },
   )
 
   useEffect(() => {
-    fetchPhotos(searchQuery || category, currentPage, perPage)
-  }, [searchQuery, category, currentPage])
+    fetchPhotos(searchQuery || category, currentPage, perPage, sort)
+  }, [searchQuery, category, currentPage, sort])
 
   return (
     <section className={styles.photosSection}>
-      <Selector options={sortOptions} defaultValue={sortOptions[0].name} />
+      <Selector
+          options={searchSortOptions}
+          defaultValue={searchSortOptions[0].name}
+          onSortChange={setSort}
+      />
 
       {error && <h1>Произошла ошибка {error}</h1>}
       {isLoading && <Loader />}

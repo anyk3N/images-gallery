@@ -3,7 +3,3 @@ export const searchSortOptions = [
   { value: "latest", name: "Latest" },
 ]
 
-export const mainSortOptions = [
-  { value: "latest", name: "Latest" },
-  { value: "relevant", name: "Relevant" },
-]
